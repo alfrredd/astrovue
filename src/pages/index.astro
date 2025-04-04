@@ -1,7 +1,167 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout>
-	<Welcome />
+
+<Layout title="Join Our Logistics Fleet">
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>[Your Catchy Title Here - e.g., Drive Your Future Forward!]</h1>
+      <p>
+        [Your introductory text explaining the opportunity. Briefly mention what the job entails and why someone should be interested in joining your logistics fleet.]
+      </p>
+      <a href="/apply" class="cta-button">Apply Now</a>
+    </section>
+
+    <!-- Job Requirements Section -->
+    <section class="requirements">
+      <h2>Job Requirements</h2>
+      <ul>
+        <li>Valid Commercial Driver's License (CDL) - Class A</li>
+        <li>Minimum 1 year of verifiable driving experience</li>
+        <li>Clean driving record and ability to pass background checks</li>
+        <li>[Add more specific requirements as needed]</li>
+      </ul>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What type of routes do you offer?</summary>
+        <p>We offer a mix of local, regional, and long-haul routes depending on the specific contract and driver preference.</p>
+      </details>
+      <details>
+        <summary>What kind of equipment will I be driving?</summary>
+        <p>Our fleet consists of modern, well-maintained trucks (specify model/year range if possible) equipped with [mention specific features like GPS, safety tech].</p>
+      </details>
+      <details>
+        <summary>What is the compensation structure?</summary>
+        <p>We offer competitive pay based on mileage/hourly rate (be specific if possible), plus potential bonuses and benefits. More details are provided during the application process.</p>
+      </details>
+    </section>
+  </main>
 </Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 80ch; /* Limit content width for readability */
+  }
+
+  section {
+    margin-bottom: 3rem; /* Space between sections */
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgba(var(--accent-dark), 5%); /* Subtle background for sections */
+  }
+
+  .hero {
+      text-align: center;
+      background-color: transparent; /* Hero might not need a background */
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Larger title */
+    margin-bottom: 1rem;
+    color: rgb(var(--accent-light));
+  }
+
+   .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: rgb(var(--primary-text)); /* Adjust color if needed */
+   }
+
+  .cta-button {
+    display: inline-block;
+    background-color: rgb(var(--accent));
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: rgb(var(--accent-dark));
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgb(var(--accent-light));
+    padding-bottom: 0.5rem;
+     color: rgb(var(--accent));
+  }
+
+  .requirements ul {
+    list-style: disc; /* Use standard bullets */
+    padding-left: 2rem; /* Indent bullet points */
+     color: rgb(var(--primary-text)); /* Adjust color if needed */
+  }
+
+  .requirements li {
+    margin-bottom: 0.5rem; /* Space between requirements */
+  }
+
+  .faq details {
+    margin-bottom: 1rem; /* Space between FAQ items */
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+
+   .faq summary {
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none; /* Remove default marker */
+    position: relative;
+    color: rgb(var(--secondary-text)); /* Adjust color if needed */
+  }
+
+  /* Optional: Add a custom dropdown arrow */
+  .faq summary::marker, /* Hide default arrow in Firefox */
+  .faq summary::-webkit-details-marker /* Hide default arrow in Chrome/Safari */ {
+      display: none;
+  }
+   .faq summary::after {
+       content: '+'; /* Simple indicator */
+       position: absolute;
+       right: 1rem;
+       font-size: 1.2em;
+       transition: transform 0.2s ease-in-out;
+    }
+
+   .faq details[open] summary::after {
+       transform: rotate(45deg);
+   }
+
+
+  .faq details p {
+    padding: 0 1rem 1rem 1rem; /* Padding for the answer */
+    margin: 0;
+    color: rgb(var(--primary-text)); /* Adjust color if needed */
+  }
+
+  /* Basic theme variables assumed from default Astro setup */
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --primary-text: 18, 18, 18; /* Example text color */
+    --secondary-text: 51, 51, 51; /* Example secondary text */
+    --background: 255, 255, 255; /* Example background */
+  }
+  body {
+      background-color: rgb(var(--background));
+      color: rgb(var(--primary-text));
+  }
+  /* Add dark mode styles if needed */
+
+</style>
