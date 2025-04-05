@@ -3,165 +3,68 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Join Our Logistics Fleet">
-  <main>
+  <main class="max-w-4xl mx-auto p-6"> 
+
     <!-- Hero Section -->
-    <section class="hero">
-      <h1>[Your Catchy Title Here - e.g., Drive Your Future Forward!]</h1>
-      <p>
-        [Your introductory text explaining the opportunity. Briefly mention what the job entails and why someone should be interested in joining your logistics fleet.]
+    <section class="hero text-center py-8 md:py-16">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-cerulean-700"> 
+        Drive Your Future Forward!
+      </h1>
+      <p class="text-lg md:text-xl mb-6"> 
+        Join our growing team of professional drivers. We offer competitive pay, modern equipment, and reliable routes. Take the wheel of your career today!
       </p>
-      <a href="/apply" class="cta-button">Apply Now</a>
+      <a href="/apply" class="cta-button inline-block bg-cerulean-500 text-white px-6 py-3 rounded font-bold transition duration-300 ease-in-out hover:bg-blue-ncs-600 no-underline"> 
+        Apply Now
+      </a>
     </section>
 
     <!-- Job Requirements Section -->
-    <section class="requirements">
-      <h2>Job Requirements</h2>
-      <ul>
-        <li>Valid Commercial Driver's License (CDL) - Class A</li>
-        <li>Minimum 1 year of verifiable driving experience</li>
-        <li>Clean driving record and ability to pass background checks</li>
-        <li>[Add more specific requirements as needed]</li>
+    <section class="requirements mb-12 p-6 rounded-lg bg-black-800"> 
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4 pb-2 border-b border-cerulean-500 text-blue-ncs"> 
+        Job Requirements
+      </h2>
+      <ul class="list-disc pl-5"> 
+        <li class="mb-2">Valid Commercial Driver's License (CDL) - Class A</li>
+        <li class="mb-2">Minimum 1 year of verifiable driving experience</li>
+        <li class="mb-2">Clean driving record and ability to pass background checks</li>
+        <li class="mb-2">Ability to operate electronic logs</li>
       </ul>
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
-      <h2>Frequently Asked Questions</h2>
-      <details>
-        <summary>What type of routes do you offer?</summary>
-        <p>We offer a mix of local, regional, and long-haul routes depending on the specific contract and driver preference.</p>
-      </details>
-      <details>
-        <summary>What kind of equipment will I be driving?</summary>
-        <p>Our fleet consists of modern, well-maintained trucks (specify model/year range if possible) equipped with [mention specific features like GPS, safety tech].</p>
-      </details>
-      <details>
-        <summary>What is the compensation structure?</summary>
-        <p>We offer competitive pay based on mileage/hourly rate (be specific if possible), plus potential bonuses and benefits. More details are provided during the application process.</p>
-      </details>
+    <section class="faq p-6 rounded-lg bg-black-800"> 
+      <h2 class="text-2xl md:text-3xl font-semibold mb-6 pb-2 border-b border-cerulean-500 text-blue-ncs"> 
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-4">
+        <details class="bg-black-700 border border-black-600 rounded group"> 
+          <summary class="p-4 cursor-pointer font-semibold list-none flex justify-between items-center group-open:bg-black-600 rounded-t"> 
+            What type of routes do you offer?
+            <span class="text-cerulean-500 transform group-open:rotate-45 transition-transform duration-200">+</span> 
+          </summary>
+          <p class="p-4"> 
+            We offer a mix of local, regional, and long-haul routes depending on the specific contract and driver preference.
+          </p>
+        </details>
+        <details class="bg-black-700 border border-black-600 rounded group">
+           <summary class="p-4 cursor-pointer font-semibold list-none flex justify-between items-center group-open:bg-black-600 rounded-t">
+            What kind of equipment will I be driving?
+            <span class="text-cerulean-500 transform group-open:rotate-45 transition-transform duration-200">+</span>
+          </summary>
+          <p class="p-4">
+            Our fleet consists of modern, well-maintained trucks (Late-model Freightliners and Volvos) equipped with GPS and safety technology.
+          </p>
+        </details>
+        <details class="bg-black-700 border border-black-600 rounded group">
+           <summary class="p-4 cursor-pointer font-semibold list-none flex justify-between items-center group-open:bg-black-600 rounded-t">
+            What is the compensation structure?
+             <span class="text-cerulean-500 transform group-open:rotate-45 transition-transform duration-200">+</span>
+          </summary>
+          <p class="p-4">
+            We offer competitive pay per mile (or hourly, specify), plus performance bonuses and a comprehensive benefits package including health insurance and paid time off. More details are provided during the application process.
+          </p>
+        </details>
+      </div>
     </section>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 80ch; /* Limit content width for readability */
-  }
-
-  section {
-    margin-bottom: 3rem; /* Space between sections */
-    padding: 1rem;
-    border-radius: 8px;
-    background-color: rgba(var(--accent-dark), 5%); /* Subtle background for sections */
-  }
-
-  .hero {
-      text-align: center;
-      background-color: transparent; /* Hero might not need a background */
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem; /* Larger title */
-    margin-bottom: 1rem;
-    color: rgb(var(--accent-light));
-  }
-
-   .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      color: rgb(var(--primary-text)); /* Adjust color if needed */
-   }
-
-  .cta-button {
-    display: inline-block;
-    background-color: rgb(var(--accent));
-    color: white;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-
-  .cta-button:hover {
-    background-color: rgb(var(--accent-dark));
-  }
-
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid rgb(var(--accent-light));
-    padding-bottom: 0.5rem;
-     color: rgb(var(--accent));
-  }
-
-  .requirements ul {
-    list-style: disc; /* Use standard bullets */
-    padding-left: 2rem; /* Indent bullet points */
-     color: rgb(var(--primary-text)); /* Adjust color if needed */
-  }
-
-  .requirements li {
-    margin-bottom: 0.5rem; /* Space between requirements */
-  }
-
-  .faq details {
-    margin-bottom: 1rem; /* Space between FAQ items */
-    border: 1px solid #eee;
-    border-radius: 4px;
-    background-color: #fff;
-  }
-
-   .faq summary {
-    padding: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    list-style: none; /* Remove default marker */
-    position: relative;
-    color: rgb(var(--secondary-text)); /* Adjust color if needed */
-  }
-
-  /* Optional: Add a custom dropdown arrow */
-  .faq summary::marker, /* Hide default arrow in Firefox */
-  .faq summary::-webkit-details-marker /* Hide default arrow in Chrome/Safari */ {
-      display: none;
-  }
-   .faq summary::after {
-       content: '+'; /* Simple indicator */
-       position: absolute;
-       right: 1rem;
-       font-size: 1.2em;
-       transition: transform 0.2s ease-in-out;
-    }
-
-   .faq details[open] summary::after {
-       transform: rotate(45deg);
-   }
-
-
-  .faq details p {
-    padding: 0 1rem 1rem 1rem; /* Padding for the answer */
-    margin: 0;
-    color: rgb(var(--primary-text)); /* Adjust color if needed */
-  }
-
-  /* Basic theme variables assumed from default Astro setup */
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --primary-text: 18, 18, 18; /* Example text color */
-    --secondary-text: 51, 51, 51; /* Example secondary text */
-    --background: 255, 255, 255; /* Example background */
-  }
-  body {
-      background-color: rgb(var(--background));
-      color: rgb(var(--primary-text));
-  }
-  /* Add dark mode styles if needed */
-
-</style>
