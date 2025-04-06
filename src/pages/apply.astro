@@ -2,35 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Apply Now">
-    <main>
-        <h1>Application Page</h1>
-        <p>Application form will go here.</p>
-        <a href="/" class="back-button">&larr; Back to Home</a>
+    <main class="mt-8 flex flex-col items-center justify-center min-h-screen ">
+        <h1 class="text-3xl font-semibold text-blue-ncs-600 mb-8">Application Page</h1>
+        <div class="shadow-md rounded-lg overflow-hidden w-full max-w-2xl">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSc4gIxbKP1lKrsT8zrRlbtUZ9Z7b75-6OrAQZayxIn5ia9DDg/viewform?embedded=true"
+                width="640"
+                height="1000"
+            >Loading…</iframe
+            >
+        </div>
+        <a href="/" class="mt-8 mb-8 px-4 py-2 bg-cerulean-500 text-white text-white px-6 py-3 rounded font-bold transition duration-300 ease-in-out hover:bg-blue-ncs-600 no-underline">&larr; Back to Home</a>
     </main>
 </Layout>
-
-<style>
-    main {
-        margin: auto;
-        padding: 1.5rem;
-        max-width: 60ch;
-        text-align: center;
-    }
-    .back-button {
-        display: inline-block;
-        margin-top: 2rem;
-        color: rgb(var(--accent));
-        text-decoration: none;
-    }
-    .back-button:hover {
-        text-decoration: underline;
-    }
-
-  :root {
-    --accent: 136, 58, 234;
-  }
-    h1 {
-        color: rgb(var(--accent));
-    }
-
-</style>
