@@ -1,6 +1,7 @@
 # AstroVue Web Project
 
 A web application built with Astro and Vue.
+Includes Google Forms window
 
 ## Installation
 
